@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>蘑菇街</title>
+		<link rel="stylesheet" href="../css/index.css">
+		<link rel="stylesheet" href="../css/swiper-3.4.0.min.css">
+		<script src="../swiper/zepto.min.js"></script>
+		<script src="../swiper/swiper-3.4.0.jquery.min.js"></script>
+		<script src="../iscroll/iscroll.js"></script>
+		<script src="../js/camera.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/scroll.js"></script>
+		<style>
+			#barcode {
+				position: absolute;
+				left: 80%;
+				top: 2.2rem;
+				background-color: red;
+				width: .50rem;
+				height: .5rem;
+				background:url(../img/barcode.png)  no-repeat;
+				background-size:100% 100%;
+				border:none 0;
+				outline:none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<button id="barcode" onclick='startRecognize()'></button>
+		<div id="bcid"></div>
+		<div id="scan"></div>
+		<div class="container">
+			<header>
+				<div class="top">
+					<a href="javascript:;">
+						<img src="../img/0.jpg">
+					</a>
+				</div>
+			</header>
+			<div class="form">
+				<a href="javascript:;" class="wei"></a>
+				<form action="javascript:;" class="search">
+					<input type="text" placeholder="简约百搭欧美大牌短靴">
+				</form>
+				<a href="javascript:;" class="cart"></a>
+			</div>
+			<div id="running">
+				<div class="beauty">
+					<section id="wrapper">
+						<div class="swiper-container" id="banner">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="javascript:;"><img src="../img/banner1.webp"></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;"><img src="../img/banner2.webp"></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;"><img src="../img/banner3.webp"></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;"><img src="../img/banner4.webp"></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;"><img src="../img/banner5.webp"></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;"><img src="../img/banner6.webp"></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;"><img src="../img/banner7.webp"></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;"><img src="../img/banner8.webp"></a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</section>
+					<section id="container">
+						<div class="main">
+							<a href="javascript:;"><img src="../img/main.webp"></a>
+						</div>
+						<div class="main1">
+							<a href="javascript:;"><img src="../img/zhuawawa.webp"></a>
+							<a href="javascript:;"><img src="../img/mingixingmaishou.webp"></a>
+							<a href="javascript:;"><img src="../img/hongren.webp"></a>
+						</div>
+						<div class="main2">
+							<a href="javascript:;"><img src="../img/nvzhuang.webp"></a>
+							<a href="javascript:;"><img src="../img/girlshow1.webp"></a>
+							<a href="javascript:;"><img src="../img/beautiful.webp"></a>
+							<a href="javascript:;"><img src="../img/man.webp"></a>
+							<a href="javascript:;"><img src="../img/bag.webp"></a>
+							<a href="javascript:;" class="no-left"><img src="../img/home.webp"></a>
+							<a href="javascript:;"><img src="../img/bra.webp"></a>
+							<a href="javascript:;"><img src="../img/sport.webp"></a>
+							<a href="javascript:;"><img src="../img/acc.webp"></a>
+							<a href="javascript:;" class="no-left"><img src="../img/baby.webp"></a>
+							<a href="javascript:;"><img src="../img/food.webp"></a>
+							<a href="javascript:;"><img src="../img/sale.webp"></a>
+							<a href="javascript:;"><img src="../img/market.webp"></a>
+						</div>
+					</section>
+					<section class="z1">
+						<p style="font-size: 0.3rem; color: #333333;  width: 3.13rem; background-image: url(../img/z1_313x10.png);background-size: 3.13rem auto;">买实惠</p>
+						<span>热门促销</span>
+					</section>
+					<section class="cuxiao">
+						<div class="col-1">
+							<a href="javascript:;">
+								<div class="title">
+									<p class="p1">团购特卖</p>
+									<p class="p2">大促返场1元抢购</p>
+								</div>
+								<img src="../img/dacu.webp">
+							</a>
+						</div>
+						<div class="col-2">
+							<div class="col-2-row-1">
+								<a href="javascript:;">
+									<div class="title-box">
+										<p class="p1">团购</p>
+										<p class="p2">大促返场</p>
+									</div>
+									<img src="../img/xianshi.webp">
+								</a>
+							</div>
+							<div class="col-2-row-2">
+								<div class="col-2-row-2-col">
+									<a href="javascript:;">
+										<div class="title-b">
+											<p class="p1">团购</p>
+											<p class="p2">大促</p>
+										</div>
+										<img src="../img/chuqiu.webp">
+									</a>
+								</div>
+								<div class="col-2-row-2-col">
+									<a href="javascript:;">
+										<div class="title-b">
+											<p class="p1">特卖</p>
+											<p class="p2">大促</p>
+										</div>
+										<img src="../img/chaozhi.webp">
+									</a>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="z2">
+						<p style="font-size: 0.3rem; color: #333333;  width: 3.13rem; background-image: url(../img/z1_313x10.png);background-size: 3.13rem auto;">正在流行</p>
+						<span>热门分类</span>
+					</section>
+					<section class="main-kind">
+						<div class="all">
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/shangyi.webp">
+									</div>
+									<p class="title">上衣</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/qunzi.webp">
+									</div>
+									<p class="title">裙子</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/kuzi.webp">
+									</div>
+									<p class="title">裤子</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/neiyi.webp">
+									</div>
+									<p class="title">内衣</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/nvxie.webp">
+									</div>
+									<p class="title">女鞋</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/nanyou.webp">
+									</div>
+									<p class="title">男友</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/baobao.webp">
+									</div>
+									<p class="title">包包</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/peishi.webp">
+									</div>
+									<p class="title">配饰</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/yundong.webp">
+									</div>
+									<p class="title">运动</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/meizhuang.webp">
+									</div>
+									<p class="title">美妆</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/muying.webp">
+									</div>
+									<p class="title">母婴</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/jiaju.webp">
+									</div>
+									<p class="title">家居</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/xihu.webp">
+									</div>
+									<p class="title">热销洗护</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/baihuo.webp">
+									</div>
+									<p class="title">百货</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/shipin.webp">
+									</div>
+									<p class="title">食品</p>
+								</a>
+							</div>
+							<div class="item">
+								<a href="javascript:;">
+									<div class="img-wrap">
+										<img src="../img/jiadian.webp">
+									</div>
+									<p class="title">家电数码</p>
+								</a>
+							</div>
+						</div>
+					</section>
+					<section class="z3">
+						<p style="font-size: 0.3rem; color: #333333;  width: 3.13rem; background-image: url(../img/z1_313x10.png);background-size: 3.13rem auto;">猜你喜欢</p>
+					</section>
+					<section class="guess" id="scroll-continer">
+						<div class="scroll">
+							<!--<div id="pull-down" style="height: 20px; line-height: 20px;">下拉刷新</div>-->
+							<div class="list" id="pull-data">
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/shangyi1.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/shangyi2.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/xie1.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/xie2.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<!--<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/shangyi3.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/shangyi4.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/kuzi1.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/shangyi5.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/shangyi5.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/baby1.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/weijin1.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/weijin2.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/fen3.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>
+								<a href="javascript:;" class="goods-item fl">
+									<div class="goods-img">
+										<img src="../img/double11.png" class="top-icon">
+										<img src="../img/fen3.webp" class="con-icon">
+									</div>
+									<div class="goods-info">
+										<div class="name-box">
+											<p class="goods-name">
+												JDWM秋冬新款加薄棉纯色呢大衣情侣毛呢外套 情侣装
+											</p>
+										</div>
+										<div class="bot-box">
+											<p class="p-price fl">￥179.2</p>
+											<p class="p-feed fr">4933</p>
+										</div>
+									</div>
+								</a>-->
+							</div>
+							<div id="pull-up" style="height: 20px; line-height: 20px;">上拉加载</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<footer>
+				<a href="javascript:;" class="active">
+					<img src="../img/index.png">
+					<span>首页</span>
+				</a>
+				<a href="javascript:;">
+					<img src="../img/good.png" id="btn">
+					<span>拍照</span>
+				</a>
+				<a href="javascript:;">
+					<img src="../img/kind.png">
+					<span>首页</span>
+				</a>
+				<a href="javascript:;">
+					<img src="../img/my.png">
+					<span>首页</span>
+				</a>
+			</footer>
+
+		</div>
+		<script>
+			var mySwiper = new Swiper("#banner", {
+				loop: true,
+				pagination: '.swiper-pagination',
+				autoplay: 2000,
+				autoplayDisableOnInteraction: false,
+				observer: true
+			});
+
+			function sucFunc() {
+				console.log("拍照成功");
+			}
+
+			function errFunc(error) {
+				var code = error.code; // 错误编码
+				var message = error.message; // 错误描述信息
+			}
+
+			document.addEventListener('plusready', function() {
+				$("#btn").click(function() {
+					var myCam = plus.camera.getCamera();
+					var myFormat = myCam.supportedImageFormats;
+					myCam.captureImage(sucFunc, errFunc, {
+						format: myFormat,
+						index: '2',
+
+					})
+				});
+
+			});
+			document.addEventListener("plusready", scanCode, false);
+			// 扩展API加载完毕，现在可以正常调用扩展API
+			function scanCode() {
+				var e = document.getElementById("scan");
+				e.removeAttribute("disabled");
+			}
+			var scan = null;
+
+			function onmarked(type, result) {
+				var text = '未知: ';
+				switch(type) {
+					case plus.barcode.QR:
+						text = 'QR: ';
+						break;
+					case plus.barcode.EAN13:
+						text = 'EAN13: ';
+						break;
+					case plus.barcode.EAN8:
+						text = 'EAN8: ';
+						break;
+				}
+				alert(text + result);
+			}
+
+			function startRecognize() {
+			
+			$("#bcid").css({width:"100%", height:"100%"});
+				scan = new plus.barcode.Barcode('bcid');
+				scan.onmarked = onmarked;
+				scan.start();
+				scan.setFlash();
+			}
+			
+		</script>
+	</body>
+
+</html>
