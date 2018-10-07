@@ -78,6 +78,7 @@ window.onload = function() {
 			}
 			
 		})
-	}, 100);
+	};
+    }, 100);
 
 }
