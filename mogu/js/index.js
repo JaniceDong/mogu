@@ -64,7 +64,7 @@ window.onload = function() {
 		function pullUpData() {
 		$.ajax({
 			type: 'get',
-			url: 'http://list.mogujie.com/search?cKey=h5-shopping&fcid=&pid=9750&searchTag=&sort=pop&page=2&ratio=3%3A4&_version=1&_=1478610876280&callback=?',
+			url: 'https://list.mogujie.com/search?cKey=h5-shopping&fcid=&pid=9750&searchTag=&sort=pop&page=2&ratio=3%3A4&_version=1&_=1478610876280&callback=?',
 			async:true,
 			dataType:'JSONP',
 			jsonp:'callback',
